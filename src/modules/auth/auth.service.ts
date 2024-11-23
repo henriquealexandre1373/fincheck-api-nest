@@ -3,10 +3,11 @@ import {
   Injectable,
   UnauthorizedException,
 } from '@nestjs/common';
-import { SigninDto } from './dto/signin.dto';
-import { UsersRepository } from 'src/shared/database/repositories/users.repositories';
 import { compare, hash } from 'bcryptjs';
 import { JwtService } from '@nestjs/jwt';
+
+import { UsersRepository } from 'src/shared/database/repositories/users.repositories';
+import { SigninDto } from './dto/signin.dto';
 import { SignupDto } from './dto/signup.dto';
 
 @Injectable()
